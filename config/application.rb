@@ -11,7 +11,7 @@ module JobSearchSolution
     config.generators do |generate|
       generate.assets false
       generate.helper false
-      generate.test_framework :rsepc, fixture: true
+      generate.test_framework :rspec, fixture: true
       generate.fixture_replacement :factory_bot, suffix_factory: 'factory'
       generate.factory_bot dir: 'spec/factories'
     end
