@@ -17,9 +17,9 @@ User Stories:
 * As a User, I can apply for a Job
 
 Requirements:
- [X] Rails 6.0.3.4 (latest)
- [] Tests
- [X] Postgres
- [X] Create a Repository
- [X] SOLID Principals
+- [X] Rails 6.0.3.4 (latest)
+- [ ] Tests
+- [X] Postgres
+- [X] Create a Repository
+- [X] SOLID Principals
 
