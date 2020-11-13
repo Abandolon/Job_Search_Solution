@@ -4,3 +4,4 @@
 <% @job.shift_dates.each do |sd| %>
   <p><%= sd.start_date.strftime("%d/%b/%Y") %> - <%= sd.end_date.strftime("%d/%b/%Y") %></p>
 <% end %>
+<%= link_to  "Apply For This Job", job_job_applications_path(job_id: @job.id), method: :post %>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'jobs#index'
 
-  resources :jobs, only: [:index, :show]
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :jobs, only: [:index, :show] do
+    resources :job_applications, only: [:create]
+  end
 end
