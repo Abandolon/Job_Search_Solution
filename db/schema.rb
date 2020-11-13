@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_11_10_155511) do
   create_table "shift_dates", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
+    t.integer "hours_per_day"
     t.bigint "job_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

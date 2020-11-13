@@ -8,4 +8,12 @@ RSpec.describe ShiftDate, type: :model do
     it { should validate_presence_of :end_date }
     it { is_expected.to belong_to :job }
   end
+
+  context "calculate total hours" do
+    let(:shift_date) { create :shift_date, job: create(:job) }
+
+    it "should calculate" do
+      expect(shift_date.total_hours).to be > 9
+    end
+  end
 end
