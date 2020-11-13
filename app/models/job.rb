@@ -2,6 +2,7 @@ class Job < ApplicationRecord
   has_many :job_language, dependent: :destroy
   has_many :languages, through: :job_language
   has_many :shift_dates, dependent: :destroy
+  has_many :job_applications, dependent: :destroy
   validates :title, presence: true, uniqueness: true
   validates :salary, presence: true
 
