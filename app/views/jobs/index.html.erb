@@ -1,14 +1,20 @@
 <div>
+  <%= form_tag jobs_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a movie"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
   <ul>
     <% @jobs.each do |job| %>
       <li>
         <h2>Job Title: <%= link_to  job.title, job_path(job) %> </h2>
         <p> Total Salary: <%= job.total_salary %> <p>
         <p> Languages:
-        <% job.languages.each do |lanaguage| %>
-          <li>
-            <%= language.name_eng %>
-          </li>
+        <% job.languages.each do |language| %>
+            <p><%= language.name_eng %></p>
         <% end %>
       </li>
     <% end %>
