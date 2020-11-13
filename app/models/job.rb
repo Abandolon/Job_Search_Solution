@@ -1,4 +1,8 @@
 class Job < ApplicationRecord
+  require 'pg_search'
+  include PgSearch::Model
+  multisearchable against: [:title]
+
   has_many :job_language, dependent: :destroy
   has_many :languages, through: :job_language
   has_many :shift_dates, dependent: :destroy

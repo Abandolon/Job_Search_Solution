@@ -22,11 +22,9 @@ puts "Creating 10 Jobs"
     FactoryBot.create(:shift_date, job: job)
   end
   puts "Assigning 2 languages for job: #{job.title}"
-  2.times do
-    languages = Language.all.sample(2)
-    languages.each do |language|
-      JobLanguage.create(job: job, language: language)
-    end
+  languages = Language.all.sample(2)
+  languages.each do |language|
+    JobLanguage.create(job: job, language: language)
   end
   puts "Finished creating job: #{job.title}"
 end
