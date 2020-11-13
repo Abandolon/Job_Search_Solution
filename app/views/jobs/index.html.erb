@@ -3,10 +3,11 @@
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: "Find a movie"
+      placeholder: "Search by Job Title or Spoken Language"
     %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
+  <p>
   <ul>
     <% @jobs.each do |job| %>
       <li>
